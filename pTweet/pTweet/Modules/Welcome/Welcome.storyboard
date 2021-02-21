@@ -37,7 +37,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-r3-vnZ">
                                         <rect key="frame" x="50" y="791" width="314" height="30"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Registro">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -48,9 +48,12 @@
                                             <constraint firstAttribute="height" constant="57" id="a9w-dM-mNd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Iniciar Sesion">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="PGn-xp-dHm" kind="show" id="mhV-7M-D4Q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64611355528539538" colorSpace="custom" customColorSpace="displayP3"/>
@@ -88,20 +91,63 @@
             </objects>
             <point key="canvasLocation" x="834.78260869565224" y="199.55357142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Iniciar Sesion-->
         <scene sceneID="amM-Ho-IK5">
             <objects>
                 <viewController id="PGn-xp-dHm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tpU-Fv-Dwi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-3P-o1Y">
+                                <rect key="frame" x="20" y="160" width="374" height="145"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-HW-fDC">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-Ra-5sN">
+                                        <rect key="frame" x="0.0" y="44" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIa-pj-sdq">
+                                        <rect key="frame" x="0.0" y="88" width="374" height="57"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="4AS-ml-Ex1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Iniciar Sesion">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomImage" translatesAutoresizingMaskIntoConstraints="NO" id="BMw-gE-l3m">
+                                <rect key="frame" x="0.0" y="771" width="414" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="TMI-hZ-I2G"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dU4-jd-6kH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BMw-gE-l3m" firstAttribute="trailing" secondItem="dU4-jd-6kH" secondAttribute="trailing" id="JXu-gJ-UMf"/>
+                            <constraint firstItem="TZI-3P-o1Y" firstAttribute="leading" secondItem="dU4-jd-6kH" secondAttribute="leading" constant="20" id="JgS-v6-yNw"/>
+                            <constraint firstItem="dU4-jd-6kH" firstAttribute="trailing" secondItem="TZI-3P-o1Y" secondAttribute="trailing" constant="20" id="LFh-aa-k0S"/>
+                            <constraint firstItem="BMw-gE-l3m" firstAttribute="leading" secondItem="dU4-jd-6kH" secondAttribute="leading" id="bX3-bd-IDw"/>
+                            <constraint firstAttribute="bottom" secondItem="BMw-gE-l3m" secondAttribute="bottom" id="lOz-xm-bAt"/>
+                            <constraint firstItem="TZI-3P-o1Y" firstAttribute="top" secondItem="dU4-jd-6kH" secondAttribute="top" constant="20" id="zgh-og-yWB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Iniciar Sesion" id="w2c-7k-fRr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwm-xf-v6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685.5072463768117" y="337.5"/>
+            <point key="canvasLocation" x="2234.7826086956525" y="41.517857142857139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cCy-xK-MQC">
@@ -116,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWR-9X-yiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2426.0869565217395" y="152.67857142857142"/>
+            <point key="canvasLocation" x="2235" y="885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TCb-Fx-NsR">
@@ -138,9 +184,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bottomImage" width="351.5" height="123"/>
         <image name="loginBg" width="640" height="425"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
