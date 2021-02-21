@@ -1,0 +1,6 @@
+framework module Pods_pTweet {
+  umbrella header "Pods-pTweet-umbrella.h"
+
+  export *
+  module * { export * }
+}
