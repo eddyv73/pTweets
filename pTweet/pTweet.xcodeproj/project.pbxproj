@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2FCF42AD25E2291700E18AA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF42AC25E2291700E18AA8 /* AppDelegate.swift */; };
-		2FCF42AF25E2291700E18AA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF42AE25E2291700E18AA8 /* SceneDelegate.swift */; };
 		2FCF42B125E2291700E18AA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF42B025E2291700E18AA8 /* ViewController.swift */; };
 		2FCF42B425E2291700E18AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCF42B225E2291700E18AA8 /* Main.storyboard */; };
 		2FCF42B625E2291900E18AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCF42B525E2291900E18AA8 /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		2FCF42A925E2291700E18AA8 /* pTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCF42AC25E2291700E18AA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FCF42AE25E2291700E18AA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2FCF42B025E2291700E18AA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2FCF42B325E2291700E18AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FCF42B525E2291900E18AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				2FCF42AC25E2291700E18AA8 /* AppDelegate.swift */,
-				2FCF42AE25E2291700E18AA8 /* SceneDelegate.swift */,
 				2FCF42B025E2291700E18AA8 /* ViewController.swift */,
 				2FCF42B225E2291700E18AA8 /* Main.storyboard */,
 				2FCF42B525E2291900E18AA8 /* Assets.xcassets */,
@@ -80,7 +77,6 @@
 				DFE7ED107CFAF6C55935CC6D /* Pods-pTweet.debug.xcconfig */,
 				4B9055843E9B69EAE828A036 /* Pods-pTweet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +204,6 @@
 			files = (
 				2FCF42B125E2291700E18AA8 /* ViewController.swift in Sources */,
 				2FCF42AD25E2291700E18AA8 /* AppDelegate.swift in Sources */,
-				2FCF42AF25E2291700E18AA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HC7295HS9;
 				INFOPLIST_FILE = pTweet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wister.pTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HC7295HS9;
 				INFOPLIST_FILE = pTweet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wister.pTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
