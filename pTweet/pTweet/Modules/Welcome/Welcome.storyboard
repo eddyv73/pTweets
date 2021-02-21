@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="loginBg" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-Gf-Lka">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBg" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-Gf-Lka">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkc-wY-KSd">
@@ -74,7 +74,7 @@
                         <constraints>
                             <constraint firstItem="Jkc-wY-KSd" firstAttribute="top" secondItem="Xm8-LZ-w7e" secondAttribute="top" id="3vs-YH-Poc"/>
                             <constraint firstAttribute="bottom" secondItem="bdk-Gf-Lka" secondAttribute="bottom" id="478-TR-ILj"/>
-                            <constraint firstItem="bdk-Gf-Lka" firstAttribute="top" secondItem="Zz2-Br-yHZ" secondAttribute="top" id="4mG-Jc-gGk"/>
+                            <constraint firstItem="bdk-Gf-Lka" firstAttribute="top" secondItem="Xm8-LZ-w7e" secondAttribute="top" id="4mG-Jc-gGk"/>
                             <constraint firstItem="bdk-Gf-Lka" firstAttribute="leading" secondItem="Zz2-Br-yHZ" secondAttribute="leading" id="HXW-rf-WTh"/>
                             <constraint firstItem="Jkc-wY-KSd" firstAttribute="leading" secondItem="Zz2-Br-yHZ" secondAttribute="leading" id="KMV-Ie-KXi"/>
                             <constraint firstAttribute="bottom" secondItem="Jkc-wY-KSd" secondAttribute="bottom" id="kD1-0L-UWu"/>
