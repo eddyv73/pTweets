@@ -40,6 +40,9 @@
                                         <state key="normal" title="Registro">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qS3-vA-jOE" kind="show" id="U0S-O0-2Dw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tE-lC-zXp">
                                         <rect key="frame" x="50" y="705" width="314" height="57"/>
@@ -159,9 +162,23 @@
                     <view key="view" contentMode="scaleToFill" id="ZAz-jL-li7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomImage" translatesAutoresizingMaskIntoConstraints="NO" id="Fp1-mY-GTx">
+                                <rect key="frame" x="0.0" y="771" width="414" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Bf1-iv-s4Z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qbT-bY-cJ5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fp1-mY-GTx" firstAttribute="leading" secondItem="qbT-bY-cJ5" secondAttribute="leading" id="bNU-Hf-P4Y"/>
+                            <constraint firstItem="Fp1-mY-GTx" firstAttribute="trailing" secondItem="qbT-bY-cJ5" secondAttribute="trailing" id="vEg-4E-JbK"/>
+                            <constraint firstAttribute="bottom" secondItem="Fp1-mY-GTx" secondAttribute="bottom" id="vas-VL-Obm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5Dc-8B-QvQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWR-9X-yiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
