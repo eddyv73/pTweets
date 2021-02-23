@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     
     //IBacktions
     @IBAction func loginButtonAction(){
+        view.endEditing(true)
         performLogin()
     }
     

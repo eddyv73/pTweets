@@ -88,6 +88,7 @@
 		2FCF42DC25E22D1A00E18AA8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2FDBFCC325E4DB700052E47B /* Home */,
 				2FCF42DE25E22D6600E18AA8 /* Welcome */,
 			);
 			path = Modules;
@@ -102,6 +103,13 @@
 				2FDBFCC025E4CB150052E47B /* RegisterViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2FDBFCC325E4DB700052E47B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		552F9BB6B0368F2559651E67 /* Pods */ = {
