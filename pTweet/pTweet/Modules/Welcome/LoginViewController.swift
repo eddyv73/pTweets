@@ -32,9 +32,17 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 25
     }
     private func performLogin(){
-        guard let email = emailTextField.text, email.isEmpty else {
+        guard let email = emailTextField.text, !email.isEmpty else {
             NotificationBanner(title: "Error", subtitle: "Debes Especificar un correo", style: .warning).show()
+     
             return
+        }
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            NotificationBanner(title: "Error", subtitle: "Debes Especificar una contraseña", style: .warning).show()
+            return
+        }
+        if email != nil , password != nil  {
+            NotificationBanner(title: "Success", subtitle: "Success Login", style: .success).show()
         }
     }
 
