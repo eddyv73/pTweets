@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="TU8-Wj-OVG">
             <objects>
-                <viewController id="O4g-S8-w2P" sceneMemberID="viewController">
+                <viewController id="O4g-S8-w2P" customClass="WelcomeViewController" customModule="pTweet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xm8-LZ-w7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="I6F-8v-BrF"/>
+                    <connections>
+                        <outlet property="loginButton" destination="9tE-lC-zXp" id="ARX-hd-hFo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAR-sE-whW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +100,7 @@
         <!--Iniciar Sesion-->
         <scene sceneID="amM-Ho-IK5">
             <objects>
-                <viewController id="PGn-xp-dHm" sceneMemberID="viewController">
+                <viewController id="PGn-xp-dHm" customClass="LoginViewController" customModule="pTweet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tpU-Fv-Dwi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +152,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Iniciar Sesion" id="w2c-7k-fRr"/>
+                    <connections>
+                        <outlet property="loginButton" destination="eIa-pj-sdq" id="YHL-zh-qPw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwm-xf-v6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +163,7 @@
         <!--Registro-->
         <scene sceneID="cCy-xK-MQC">
             <objects>
-                <viewController id="qS3-vA-jOE" sceneMemberID="viewController">
+                <viewController id="qS3-vA-jOE" customClass="RegisterViewController" customModule="pTweet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZAz-jL-li7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,7 +175,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-mW-IBC">
-                                <rect key="frame" x="20" y="160" width="374" height="162"/>
+                                <rect key="frame" x="20" y="160" width="374" height="189"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNm-nt-zdg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -190,8 +196,11 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a38-DW-vpe">
-                                        <rect key="frame" x="0.0" y="132" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="132" width="374" height="57"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="iAa-Y1-cHK"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Registrar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -212,6 +221,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Registro" id="5Dc-8B-QvQ"/>
+                    <connections>
+                        <outlet property="registerButton" destination="a38-DW-vpe" id="61h-uV-ryQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWR-9X-yiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
