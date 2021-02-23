@@ -159,6 +159,7 @@
                         <outlet property="emailTextField" destination="u5b-HW-fDC" id="0v6-8q-yIX"/>
                         <outlet property="loginButton" destination="eIa-pj-sdq" id="YHL-zh-qPw"/>
                         <outlet property="passwordTextField" destination="zbZ-Ra-5sN" id="A23-Uq-tij"/>
+                        <segue destination="fQv-s4-J5a" kind="presentation" identifier="showHome" modalPresentationStyle="fullScreen" id="hXG-uZ-nKU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwm-xf-v6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -234,6 +235,7 @@
                         <outlet property="namesTextField" destination="7tg-4D-qT0" id="2oR-Lj-u1F"/>
                         <outlet property="passwordTextField" destination="XCm-V8-lAa" id="KAx-1c-xxg"/>
                         <outlet property="registerButton" destination="a38-DW-vpe" id="61h-uV-ryQ"/>
+                        <segue destination="fQv-s4-J5a" kind="presentation" identifier="showHome" modalPresentationStyle="fullScreen" id="eXn-yU-ftP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWR-9X-yiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,7 +268,18 @@
             </objects>
             <point key="canvasLocation" x="-75.362318840579718" y="199.55357142857142"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="1S3-f9-2pk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="fQv-s4-J5a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQQ-ug-NCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3361" y="465"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hXG-uZ-nKU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bottomImage" width="351.5" height="123"/>
         <image name="loginBg" width="640" height="425"/>

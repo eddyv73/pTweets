@@ -45,6 +45,8 @@ class LoginViewController: UIViewController {
         if email != nil , password != nil  {
             NotificationBanner(title: "Success", subtitle: "Success Login", style: .success).show()
         }
+        
+        performSegue(withIdentifier: "showHome", sender: nil)
     }
 
 }

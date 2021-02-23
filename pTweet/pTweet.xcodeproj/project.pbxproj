@@ -15,6 +15,7 @@
 		2FDBFCBB25E4CACB0052E47B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDBFCBA25E4CACB0052E47B /* WelcomeViewController.swift */; };
 		2FDBFCBE25E4CAEF0052E47B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDBFCBD25E4CAEF0052E47B /* LoginViewController.swift */; };
 		2FDBFCC125E4CB150052E47B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDBFCC025E4CB150052E47B /* RegisterViewController.swift */; };
+		2FDBFCC525E4DB940052E47B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBFCC425E4DB940052E47B /* Home.storyboard */; };
 		CBAD76165B8DD5359825B319 /* Pods_pTweet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8334B57D653FA9817C12D262 /* Pods_pTweet.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		2FDBFCBA25E4CACB0052E47B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2FDBFCBD25E4CAEF0052E47B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FDBFCC025E4CB150052E47B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2FDBFCC425E4DB940052E47B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		4B9055843E9B69EAE828A036 /* Pods-pTweet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pTweet.release.xcconfig"; path = "Target Support Files/Pods-pTweet/Pods-pTweet.release.xcconfig"; sourceTree = "<group>"; };
 		8334B57D653FA9817C12D262 /* Pods_pTweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pTweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE7ED107CFAF6C55935CC6D /* Pods-pTweet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pTweet.debug.xcconfig"; path = "Target Support Files/Pods-pTweet/Pods-pTweet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		2FDBFCC325E4DB700052E47B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2FDBFCC425E4DB940052E47B /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				2FCF42B925E2291900E18AA8 /* LaunchScreen.storyboard in Resources */,
 				2FCF42B625E2291900E18AA8 /* Assets.xcassets in Resources */,
 				2FCF42E025E22D8300E18AA8 /* Welcome.storyboard in Resources */,
+				2FDBFCC525E4DB940052E47B /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
