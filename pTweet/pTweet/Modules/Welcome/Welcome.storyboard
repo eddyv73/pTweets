@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="2234.7826086956525" y="41.517857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Registro-->
         <scene sceneID="cCy-xK-MQC">
             <objects>
                 <viewController id="qS3-vA-jOE" sceneMemberID="viewController">
@@ -169,16 +169,47 @@
                                     <constraint firstAttribute="height" constant="125" id="Bf1-iv-s4Z"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-mW-IBC">
+                                <rect key="frame" x="152" y="140" width="154" height="132"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNm-nt-zdg">
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="34"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre y Apeliidos" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tg-4D-qT0">
+                                        <rect key="frame" x="0.0" y="34" width="154" height="34"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-V8-lAa">
+                                        <rect key="frame" x="0.0" y="68" width="154" height="34"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a38-DW-vpe">
+                                        <rect key="frame" x="0.0" y="102" width="154" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Registrar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qbT-bY-cJ5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Fp1-mY-GTx" firstAttribute="leading" secondItem="qbT-bY-cJ5" secondAttribute="leading" id="bNU-Hf-P4Y"/>
                             <constraint firstItem="Fp1-mY-GTx" firstAttribute="trailing" secondItem="qbT-bY-cJ5" secondAttribute="trailing" id="vEg-4E-JbK"/>
                             <constraint firstAttribute="bottom" secondItem="Fp1-mY-GTx" secondAttribute="bottom" id="vas-VL-Obm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5Dc-8B-QvQ"/>
+                    <navigationItem key="navigationItem" title="Registro" id="5Dc-8B-QvQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWR-9X-yiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
