@@ -60,6 +60,7 @@ class LoginViewController: UIViewController {
             case .success(let user):
                 print("login")
                 NotificationBanner(subtitle: "Welcome  \(user.user.names)", style: .success).show()
+                self.performSegue(withIdentifier: "showHome", sender: nil)
                 
             case .error(let error):
                 NotificationBanner(subtitle: "Usuario Invalido", style: .warning).show()
@@ -72,7 +73,7 @@ class LoginViewController: UIViewController {
             }
         }
         
-        //performSegue(withIdentifier: "showHome", sender: nil)
+        
     }
 
 }
