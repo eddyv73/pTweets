@@ -18,6 +18,9 @@
 		2FC3322125E61D6F00564D64 /* PostLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3322025E61D6F00564D64 /* PostLocation.swift */; };
 		2FC3322425E61D8F00564D64 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3322325E61D8F00564D64 /* User.swift */; };
 		2FC3322725E61DC800564D64 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3322625E61DC800564D64 /* EndPoints.swift */; };
+		2FC3322A25E6269F00564D64 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3322925E6269F00564D64 /* HomeViewController.swift */; };
+		2FC3322F25E627DD00564D64 /* pTweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3322D25E627DD00564D64 /* pTweetsTableViewCell.swift */; };
+		2FC3323025E627DD00564D64 /* pTweetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC3322E25E627DD00564D64 /* pTweetsTableViewCell.xib */; };
 		2FCF42AD25E2291700E18AA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF42AC25E2291700E18AA8 /* AppDelegate.swift */; };
 		2FCF42B125E2291700E18AA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF42B025E2291700E18AA8 /* ViewController.swift */; };
 		2FCF42B625E2291900E18AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCF42B525E2291900E18AA8 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		2FC3322025E61D6F00564D64 /* PostLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocation.swift; sourceTree = "<group>"; };
 		2FC3322325E61D8F00564D64 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2FC3322625E61DC800564D64 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		2FC3322925E6269F00564D64 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2FC3322D25E627DD00564D64 /* pTweetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pTweetsTableViewCell.swift; sourceTree = "<group>"; };
+		2FC3322E25E627DD00564D64 /* pTweetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pTweetsTableViewCell.xib; sourceTree = "<group>"; };
 		2FCF42A925E2291700E18AA8 /* pTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCF42AC25E2291700E18AA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FCF42B025E2291700E18AA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,15 @@
 				2FC3321A25E61C7800564D64 /* RegisterRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		2FC3322C25E627AB00564D64 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2FC3322D25E627DD00564D64 /* pTweetsTableViewCell.swift */,
+				2FC3322E25E627DD00564D64 /* pTweetsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2FCF42A025E2291700E18AA8 = {
@@ -167,7 +182,9 @@
 		2FDBFCC325E4DB700052E47B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2FC3322C25E627AB00564D64 /* Cell */,
 				2FDBFCC425E4DB940052E47B /* Home.storyboard */,
+				2FC3322925E6269F00564D64 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -252,6 +269,7 @@
 				2FCF42B625E2291900E18AA8 /* Assets.xcassets in Resources */,
 				2FCF42E025E22D8300E18AA8 /* Welcome.storyboard in Resources */,
 				2FDBFCC525E4DB940052E47B /* Home.storyboard in Resources */,
+				2FC3323025E627DD00564D64 /* pTweetsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,8 +325,10 @@
 				2FDBFCBE25E4CAEF0052E47B /* LoginViewController.swift in Sources */,
 				2FC3321825E61C3B00564D64 /* PostRequestLocation.swift in Sources */,
 				2FC3322125E61D6F00564D64 /* PostLocation.swift in Sources */,
+				2FC3322A25E6269F00564D64 /* HomeViewController.swift in Sources */,
 				2FC3321B25E61C7800564D64 /* RegisterRequest.swift in Sources */,
 				2FDBFCC125E4CB150052E47B /* RegisterViewController.swift in Sources */,
+				2FC3322F25E627DD00564D64 /* pTweetsTableViewCell.swift in Sources */,
 				2FC3321E25E61D5100564D64 /* Post.swift in Sources */,
 				2FC3320525E61ABA00564D64 /* LoginResponse.swift in Sources */,
 				2FDBFCBB25E4CACB0052E47B /* WelcomeViewController.swift in Sources */,
