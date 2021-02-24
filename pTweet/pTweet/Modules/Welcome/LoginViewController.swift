@@ -7,6 +7,8 @@
 
 import UIKit
 import NotificationBannerSwift
+import Simple_Networking
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -42,11 +44,35 @@ class LoginViewController: UIViewController {
             NotificationBanner(title: "Error", subtitle: "Debes Especificar una contraseña", style: .warning).show()
             return
         }
-        if email != nil , password != nil  {
-            NotificationBanner(title: "Success", subtitle: "Success Login", style: .success).show()
+//        if email != nil , password != nil  {
+//            NotificationBanner(title: "Success", subtitle: "Success Login", style: .success).show()
+//        }
+        
+        //Request
+        let request = LoginRequest(email: email, password: password)
+        //call request
+        //init load
+        SVProgressHUD.show()
+        SN.post(endpoint: Endpoints.login,
+                model: request) {(response: SNResultWithEntity<LoginResponse, ErrorResponse>) in
+            SVProgressHUD.dismiss()
+            switch response{
+            case .success(let user):
+                print("login")
+                NotificationBanner(subtitle: "Welcome  \(user.user.names)", style: .success).show()
+                
+            case .error(let error):
+                NotificationBanner(subtitle: "Usuario Invalido", style: .warning).show()
+                return
+                
+            case .errorResult(let entity):
+                NotificationBanner(subtitle: "Error no controlado", style: .warning).show()
+                return
+                
+            }
         }
         
-        performSegue(withIdentifier: "showHome", sender: nil)
+        //performSegue(withIdentifier: "showHome", sender: nil)
     }
 
 }
