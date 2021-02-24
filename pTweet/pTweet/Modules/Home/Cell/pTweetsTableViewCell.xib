@@ -21,7 +21,7 @@
                         <rect key="frame" x="20" y="20" width="425" height="393"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eddy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awR-bZ-LIp">
-                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="425" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet de Desarrolladores" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj7-Gg-mvm">
-                                <rect key="frame" x="0.0" y="72.5" width="194.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="72.5" width="425" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdE-bW-zyH">
-                                <rect key="frame" x="0.0" y="331.5" width="100" height="22"/>
+                                <rect key="frame" x="0.0" y="331.5" width="425" height="22"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Ver video" image="video.fill" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,6 +58,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Aj7-Gg-mvm" firstAttribute="leading" secondItem="dTb-gW-rnH" secondAttribute="leading" id="4cC-q6-xbE"/>
+                            <constraint firstItem="PdE-bW-zyH" firstAttribute="leading" secondItem="dTb-gW-rnH" secondAttribute="leading" id="JgP-LW-wBp"/>
+                            <constraint firstAttribute="trailing" secondItem="PdE-bW-zyH" secondAttribute="trailing" id="fPs-PR-oJX"/>
+                            <constraint firstAttribute="trailing" secondItem="awR-bZ-LIp" secondAttribute="trailing" id="kCV-2F-qFw"/>
+                            <constraint firstItem="awR-bZ-LIp" firstAttribute="leading" secondItem="dTb-gW-rnH" secondAttribute="leading" id="vh5-YL-XsQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Aj7-Gg-mvm" secondAttribute="trailing" id="y0C-rI-LeF"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>

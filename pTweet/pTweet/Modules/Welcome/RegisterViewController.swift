@@ -64,6 +64,7 @@ class RegisterViewController: UIViewController {
                 print("login")
                 NotificationBanner(subtitle: "Welcome  \(user.user.names)", style: .success).show()
                 self.performSegue(withIdentifier: "showHome", sender: nil)
+                SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
                 
             case .error(let error):
                 NotificationBanner(subtitle: "Usuario Invalido", style: .warning).show()
