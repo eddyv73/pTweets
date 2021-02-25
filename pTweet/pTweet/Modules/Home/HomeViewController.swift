@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI(){
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
     }
@@ -54,6 +55,43 @@ class HomeViewController: UIViewController {
                 return
         }
         }
+    }
+    private func deletePostAt(indexPath: IndexPath){
+        SVProgressHUD.show()
+        //obtener id
+        let postiId = dataSource[indexPath.row].id
+        
+        //query string para borrar
+        let endpoint = Endpoints.delete + postiId
+        
+        SN.delete(endpoint: endpoint) { (response : SNResultWithEntity<GeneralResponse , ErrorResponse>) in
+            SVProgressHUD.dismiss()
+            switch response{
+            case .success:
+                self.dataSource.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .left)
+                
+            case .error(let error):
+                NotificationBanner(subtitle: "Usuario Invalido", style: .warning).show()
+                return
+                
+            case .errorResult(let entity):
+                NotificationBanner(subtitle: "Error no controlado", style: .warning).show()
+                return
+        }
+            
+        }
+        
+        
+    }
+}
+extension HomeViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        //mark aqui se borra
+        let deleteAction = UITableViewRowAction(style: UITableViewRowAction.Style.destructive, title: "borrar") { (_, _) in
+            self.deletePostAt(indexPath: indexPath)
+        }
+        return [deleteAction]
     }
 }
 extension HomeViewController: UITableViewDataSource{
