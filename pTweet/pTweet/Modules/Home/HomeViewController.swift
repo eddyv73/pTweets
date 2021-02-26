@@ -108,3 +108,10 @@ extension HomeViewController: UITableViewDataSource{
         return cell
     }
 }
+extension HomeViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMap", let mapViewController = segue.destination as? MapViewController{
+            mapViewController.posts = dataSource.filter({$0.hasLocation})
+        }
+    }
+}
