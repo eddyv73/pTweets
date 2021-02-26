@@ -43,5 +43,10 @@
 	</array>
     <key>NSCameraUsageDescription</key>
         <string>Open Camera incoming</string>
+        <key>NSLocationWhenInUseUsageDescription</key>
+            <string>Usaremos tu ubicación para el Tweet! :)</string>
+            
+            <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+            <string>Usaremos tu ubicación para el Tweet! :)</string>
 </dict>
 </plist>

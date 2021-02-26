@@ -10,6 +10,7 @@ import Simple_Networking
 import SVProgressHUD
 import NotificationBannerSwift
 import FirebaseStorage
+import CoreLocation
 
 
 class AddPostViewController: UIViewController {
@@ -23,7 +24,9 @@ class AddPostViewController: UIViewController {
     
     
     @IBAction func addPostAction(){
-        savePost()
+
+        Uploadphototofirebase()
+        
     }
     @IBAction func DismissAction(){
         dismiss(animated: true, completion: nil)
@@ -31,14 +34,26 @@ class AddPostViewController: UIViewController {
     //mark propertys
     
     private var imagePicker: UIImagePickerController?
-    
+    private var locationManager:  CLLocationManager?
+    private var userLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        requestLocation()
         
         // Do any additional setup after loading the view.
     }
     
+    private func requestLocation(){
+        guard CLLocationManager.locationServicesEnabled() else {
+            return
+        }
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.startUpdatingLocation()
+    }
     private func OpenCamera(){
         imagePicker = UIImagePickerController()
         imagePicker?.sourceType = .camera
@@ -91,6 +106,8 @@ class AddPostViewController: UIViewController {
                     
                     //obtener url
                     folderReference.downloadURL { (url : URL?, error: Error?) in
+                        let downloadUrl = url?.absoluteString ?? ""
+                        self.savePost(imageurl: downloadUrl)
                         print(url?.absoluteString ?? "")
                     }
                 }
@@ -99,10 +116,10 @@ class AddPostViewController: UIViewController {
         
         
     }
-    private func savePost(){
+    private func savePost(imageurl: String?){
         Uploadphototofirebase()
-        return
-        let request = PostRequest(text: postTextView.text, imageUrl: nil, videoUrl: nil, location: nil)
+        
+        let request = PostRequest(text: postTextView.text, imageUrl: imageurl, videoUrl: nil, location: nil)
         SVProgressHUD.show()
         
         //        SN.post(endpoint: Endpoints.post, model: request) { (response: SNResultWithEntity<Post , ErrorResponse>)} in
@@ -139,5 +156,15 @@ extension AddPostViewController : UIImagePickerControllerDelegate , UINavigation
             previewImageView.isHidden = false
             previewImageView.image = info[.originalImage] as? UIImage
         }
+    }
+}
+
+extension AddPostViewController : CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let bestlocation = locations.last else {
+            return
+        }
+        userLocation = bestlocation
+        print("\(userLocation?.coordinate)")
     }
 }
