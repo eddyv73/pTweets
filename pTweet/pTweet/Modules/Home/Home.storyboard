@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--pTweets-->
         <scene sceneID="LLT-Vg-GxG">
             <objects>
                 <viewController id="xWm-Og-CQR" customClass="HomeViewController" customModule="pTweet" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,8 +45,12 @@
                             <constraint firstItem="a0S-6Y-8ls" firstAttribute="trailing" secondItem="F87-xu-Hs1" secondAttribute="trailing" constant="-30" id="yvm-Qv-ZkY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tkS-Gj-KZC">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="pTweets" id="tkS-Gj-KZC">
+                        <barButtonItem key="rightBarButtonItem" title="Show Map" id="6UE-O6-YE5">
+                            <connections>
+                                <segue destination="pYp-Tf-O1P" kind="show" id="V61-VL-6zK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0my-Vp-FQ5" id="70m-Su-gnk"/>
@@ -175,11 +179,45 @@
             </objects>
             <point key="canvasLocation" x="105.79710144927537" y="29.464285714285712"/>
         </scene>
+        <!--Maps-->
+        <scene sceneID="ig2-Io-dap">
+            <objects>
+                <viewController id="pYp-Tf-O1P" customClass="MapViewController" customModule="pTweet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VXh-Wh-3sg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-IX-6LD">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZFG-vn-Ata"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fAE-IX-6LD" firstAttribute="top" secondItem="ZFG-vn-Ata" secondAttribute="top" id="8SZ-6v-zes"/>
+                            <constraint firstItem="fAE-IX-6LD" firstAttribute="trailing" secondItem="ZFG-vn-Ata" secondAttribute="trailing" id="OkF-mK-WGk"/>
+                            <constraint firstItem="fAE-IX-6LD" firstAttribute="leading" secondItem="ZFG-vn-Ata" secondAttribute="leading" id="PCo-Ym-Xmp"/>
+                            <constraint firstAttribute="bottom" secondItem="fAE-IX-6LD" secondAttribute="bottom" id="YrF-Ot-EFX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Maps" id="YNx-Ul-Fti"/>
+                    <connections>
+                        <outlet property="mapContainer" destination="fAE-IX-6LD" id="Wex-Sh-WJH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXM-x2-tAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898.5507246376812" y="-295.3125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bottomImage" width="351.5" height="123"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

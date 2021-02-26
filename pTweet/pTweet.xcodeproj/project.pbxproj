@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F319A7D25E766CF006152AB /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F319A7C25E766CF006152AB /* AddPostViewController.swift */; };
 		2FADEC4425E8ABD900715D0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FADEC4325E8ABD900715D0C /* GoogleService-Info.plist */; };
+		2FADEC4825E8C65700715D0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FADEC4725E8C65700715D0C /* MapViewController.swift */; };
 		2FC3320525E61ABA00564D64 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3320425E61ABA00564D64 /* LoginResponse.swift */; };
 		2FC3320825E61ACF00564D64 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3320725E61ACF00564D64 /* ErrorResponse.swift */; };
 		2FC3320B25E61AE200564D64 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3320A25E61AE200564D64 /* GeneralResponse.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2F319A7C25E766CF006152AB /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		2FADEC4325E8ABD900715D0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FADEC4725E8C65700715D0C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2FC3320425E61ABA00564D64 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2FC3320725E61ACF00564D64 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		2FC3320A25E61AE200564D64 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				2FDBFCC425E4DB940052E47B /* Home.storyboard */,
 				2FC3322925E6269F00564D64 /* HomeViewController.swift */,
 				2F319A7C25E766CF006152AB /* AddPostViewController.swift */,
+				2FADEC4725E8C65700715D0C /* MapViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				2FDBFCBE25E4CAEF0052E47B /* LoginViewController.swift in Sources */,
 				2FC3321825E61C3B00564D64 /* PostRequestLocation.swift in Sources */,
 				2FC3322125E61D6F00564D64 /* PostLocation.swift in Sources */,
+				2FADEC4825E8C65700715D0C /* MapViewController.swift in Sources */,
 				2F319A7D25E766CF006152AB /* AddPostViewController.swift in Sources */,
 				2FC3322A25E6269F00564D64 /* HomeViewController.swift in Sources */,
 				2FC3321B25E61C7800564D64 /* RegisterRequest.swift in Sources */,

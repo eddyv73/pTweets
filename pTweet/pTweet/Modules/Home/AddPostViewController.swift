@@ -24,8 +24,11 @@ class AddPostViewController: UIViewController {
     
     
     @IBAction func addPostAction(){
-
-        Uploadphototofirebase()
+        if previewImageView != nil {
+            Uploadphototofirebase()
+            return
+        }
+        savePost(imageurl: nil)
         
     }
     @IBAction func DismissAction(){
@@ -117,9 +120,13 @@ class AddPostViewController: UIViewController {
         
     }
     private func savePost(imageurl: String?){
-        Uploadphototofirebase()
-        
-        let request = PostRequest(text: postTextView.text, imageUrl: imageurl, videoUrl: nil, location: nil)
+        //Uploadphototofirebase()
+        //crear request location
+        var postLocation: PostRequestLocation?
+        if let userLocation = userLocation {
+            postLocation = PostRequestLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        }
+        let request = PostRequest(text: postTextView.text, imageUrl: imageurl, videoUrl: nil, location: postLocation)
         SVProgressHUD.show()
         
         //        SN.post(endpoint: Endpoints.post, model: request) { (response: SNResultWithEntity<Post , ErrorResponse>)} in
